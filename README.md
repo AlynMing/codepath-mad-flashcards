@@ -4,7 +4,7 @@
 #### App Description
 I finally had a fully functional app by the end of Lab 3, but there's one more thing I want to do: make it delightful to use. As I already heard in the lecture and presentations, I can make your app really enjoyable to use by making it very responsive and playful. I did that with my Flashcards app by adding images and animations.
 
-#### App Walk-though
+#### App Walk-through
 <img src="https://alexanderjshapiro.com/src/CodePath-Flashcards5.gif" width=200><br>
 
 
@@ -25,7 +25,7 @@ I finally had a fully functional app by the end of Lab 3, but there's one more t
 #### App Description
 In this lab I made my app finally a fully functional app that you can actually use to study and ship on the App Store. I allow users to create as many flashcards as they want, browse through them and persist them even if they close the app. While building this I learned how to store data and how to write more complex logic.
 
-#### App Walk-though
+#### App Walk-through
 <img src="https://alexanderjshapiro.com/src/CodePath-Flashcards4.gif" width=200><br>
 
 #### Required
@@ -44,7 +44,7 @@ In this lab, I continued to make my flashcards app better, adding new features o
 
 While building this, I learned how to create completely new screens, how to present them from my main screen, and how to pass data from one screen to another.
 
-#### App Walk-though
+#### App Walk-through
 <img src="https://alexanderjshapiro.com/src/CodePath-Flashcards3.gif" width=200><br>
 
 #### Required
@@ -62,7 +62,7 @@ While building this, I learned how to create completely new screens, how to pres
 #### App Description
 In this lab, I built the first version of my Flashcards app that I can later use to study. While building this app I learned how to place views on the screen, control them with code and make them change when you tap on them.
 
-#### App Walk-though
+#### App Walk-through
 <img src="https://alexanderjshapiro.com/src/CodePath-Flashcards1.gif" width=200> <img src="https://alexanderjshapiro.com/src/CodePath-Flashcards2.gif" width=200><br>
 
 #### Required
