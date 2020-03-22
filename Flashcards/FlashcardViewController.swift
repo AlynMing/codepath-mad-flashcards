@@ -53,23 +53,58 @@ class FlashcardViewController: UIViewController {
 
     
     @IBAction func didTapFlashcard(_ sender: Any) {
-        if (!front.isHidden) {
-            front.isHidden = true
-        } else {
-            front.isHidden = false
-        }
+        flipFlashcard()
+    }
+    
+    func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if (!self.front.isHidden) {
+                self.front.isHidden = true
+            } else {
+                self.front.isHidden = false
+            }
+        })
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex = currentIndex + 1
-        updateLabels()
+        
         updateNavButtons()
+        animateCardOut(direction: "l")
     }
     
     @IBAction func didTapOnPrevious(_ sender: Any) {
         currentIndex = currentIndex - 1
-        updateLabels()
         updateNavButtons()
+        animateCardOut(direction: "r")
+    }
+    
+    func animateCardOut(direction: String) {
+        var dir = CGFloat.init(0.0)
+        if direction == "l" {
+            dir = -1.0
+        } else {
+            dir = 1.0
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: dir * 400.0, y: 0.0)
+        }) { (finished) in
+            self.updateLabels()
+            self.animateCardIn(direction: direction)
+        }
+    }
+    
+    func animateCardIn(direction: String) {
+        var dir = CGFloat.init(0.0)
+        if direction == "l" {
+            dir = -1.0
+        } else {
+            dir = 1.0
+        }
+        card.transform = CGAffineTransform.identity.translatedBy(x: dir * -400.0, y: 0.0)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
     }
     
     func updateFlashcard(question: String, answer: String) {
